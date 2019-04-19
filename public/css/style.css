@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "QuickSand", sans-serif;
+    color: #333333;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    /* background-color: #eeeeee; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content{
+    flex-grow: 1;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+header a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 16px;
+    margin-top: 16px;
+    color: #888888;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    border-top: 1px solid #eeeeee;
+    width: 80%;
+    color: #888888;
+    margin: 16px auto;
+    padding-top: 16px; 
+    
+}
+/* The styles bellow are applied when the weather is rendered */
+.errorCard, .successCard{
+    background-color: rgba(255, 0, 0, 0.829);
+    color: #ffffff;
+    padding: 12px;
+    margin: 0 auto 16px auto;
+    width: 55%;
+    border-radius: 5px;
+    display: none; 
+}
+
+.weatherInformation{
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: none;
+    margin-top: 32px;
+}
+
+#loadingGif, #sendingGif{
+    display: none;
+    margin-top: 20px;
+}
+
+#location{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    outline-color: none;
+}
+
+#submitBtn{
+    padding: 10px;
+    background-color: #bababa;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline-color: #ababab;
+    font-size: 15px;
+    margin-top: 7px;
+}
+
+#submitBtn:hover{
+    background-color: #ababab;
+}
+
+#addressLink{
+    text-decoration: none;
+    color: rgba(10, 51, 200, 0.76);
+}
+
+#addressLink:hover{
+    text-decoration: underline;
+}
+
+#temperature{
+    font-size: 2.5rem;
+    margin-top: 32px;
+}
+
+#apparentTemp{
+    color: #ababab;
+    font-size: 14px;
+}
+
+#summary{
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* about page */
+.portrait{
+    width: 40%;
+    border-radius: 10px;
+}
+
+.aboutText{
+    margin-top: 16px;
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+a#github,a#linkedin{
+    margin: 10px 10px 0 0;
+    display: inline-block;
+}
+
+/* Help page */
+.emailContainer{
+    border: 1px solid #eeeeee;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#emailForm{
+    display: flex;
+    flex-direction: column;
+}
+
+input#name, input#email{
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+#helpText{
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.successCard{
+    background-color: rgb(0, 200, 30)
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+
+    /*Weather page */
+    #location,.weatherInformation,.errorCard{
+        width: 70%;
+    }
+
+    /* Help Page */
+    .emailContainer,.successCard{
+        width: 80%;
+    }
+
+    /* about page */
+    .portrait{
+        width: 65%;
+    }
+}

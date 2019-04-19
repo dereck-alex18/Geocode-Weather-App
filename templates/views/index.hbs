@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/img/icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            {{>header}}
+            <div class="errorCard">
+                <p id="errorMsg"></p>
+            </div>
+            <form id="locForm">
+                <input id="location" type="text" placeholder="Enter the location" required>
+                <button id="submitBtn">Search</button>
+            </form>
+            <img src="/img/loading.gif" alt="loading" id="loadingGif">
+            <div class="weatherInformation">
+                <h2 id="address"><a href="#" id="addressLink" target="__blank"></a></h2>
+                <h3 id="temperature"></h3>
+                <p id="apparentTemp"></p>
+                <p id="summary"></p>
+            </div>
+        </div>
+        
+        {{>footer}}
+        
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>
