@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     const location = document.querySelector("#location").value //get what was written in the form
     loadingGif.style.display = "inline" //show the loading gif until the data is ready
     weatherInformation.style.display = "none" //hide the card that shows the weather info
-    fetchData(`${url}weather?address=${location}`); 
+    fetchData(`https://safe-atoll-20591.herokuapp.com/weather?address=${location}`); 
     //clean the form
     document.querySelector("#location").value = ""
 })
@@ -66,7 +66,7 @@ function getUsersLoc() {
         loadingGif.style.display = "inline"
         let coords = {lat: pos.coords.latitude, lng: pos.coords.longitude}
         //Pass the coordinates to fecthData to fetch the forecast
-        fetchData(`${url}localweather?lat=${coords.lat}&lng=${coords.lng}`);
+        fetchData(`https://safe-atoll-20591.herokuapp.com/localweather?lat=${coords.lat}&lng=${coords.lng}`);
     })
 } 
 
