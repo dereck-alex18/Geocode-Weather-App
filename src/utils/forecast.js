@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const forecast = (coordinates, callback) => {
-    const url = `https://api.darksky.net/forecast/e947844ee703ad0d3bdc66801b1977df/${coordinates.lat},${coordinates.lng}?units=si`
+    const url = `https://api.darksky.net/forecast/${process.env.FORECAST_KEY}/${coordinates.lat},${coordinates.lng}?units=si`
     request({url, json: true}, (error, response) => {
         if(error){
             //If there is an low-level error such as no internet connection, this piece of code runs
