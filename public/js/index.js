@@ -11,7 +11,7 @@ const errorCard = document.querySelector('.errorCard');
 //when the app is in development, the url is different from when it's in production that's why
 //the url is caught dynamically
 const url = `${window.location.href}`
-
+console.log(url);
 //as soon as the age is loaded, the user's location is fetched
 document.addEventListener('DOMContentLoaded', getUsersLoc)
 
@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     const location = document.querySelector("#location").value //get what was written in the form
     loadingGif.style.display = "inline" //show the loading gif until the data is ready
     weatherInformation.style.display = "none" //hide the card that shows the weather info
-    fetchData(`https://safe-atoll-20591.herokuapp.com/weather?address=${location}`); 
+    fetchData(`${url}weather?address=${location}`); 
     //clean the form
     document.querySelector("#location").value = ""
 })
@@ -66,7 +66,7 @@ function getUsersLoc() {
         loadingGif.style.display = "inline"
         let coords = {lat: pos.coords.latitude, lng: pos.coords.longitude}
         //Pass the coordinates to fecthData to fetch the forecast
-        fetchData(`https://safe-atoll-20591.herokuapp.com/localweather?lat=${coords.lat}&lng=${coords.lng}`);
+        fetchData(`${url}localweather?lat=${coords.lat}&lng=${coords.lng}`);
     })
 } 
 

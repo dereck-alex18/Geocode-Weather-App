@@ -1,7 +1,7 @@
 const request = require('request');
 
 const geocode = (address, callback) => {
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${process.env.GEOCODE_TOKEN}`
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=pk.eyJ1IjoiYWxleHBvcnQiLCJhIjoiY2p0aXd3aTN1MHBncTN6cXpndHgweW15ZiJ9.-aOKCgIOEN268hVPxQ40cQ`
     request({url, json: true}, (error, response) => {
         if(error){
             //If there is an low-level error such as no internet connection, this piece of code runs
